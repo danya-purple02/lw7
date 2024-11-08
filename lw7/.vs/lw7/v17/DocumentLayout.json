@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\prog\\PSU\\logics\\lw7\\lw7\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B4AF8CC2-3FF7-4594-8FC8-00177C695A0C}|lw7\\lw7.vcxproj|C:\\prog\\PSU\\logics\\lw7\\lw7\\lw7\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B4AF8CC2-3FF7-4594-8FC8-00177C695A0C}|lw7\\lw7.vcxproj|solutionrelative:lw7\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\prog\\PSU\\logics\\lw7\\lw7\\lw7\\main.cpp",
+              "RelativeDocumentMoniker": "lw7\\main.cpp",
+              "ToolTip": "C:\\prog\\PSU\\logics\\lw7\\lw7\\lw7\\main.cpp",
+              "RelativeToolTip": "lw7\\main.cpp",
+              "ViewState": "AgIAABQAAAAAAAAAAAAmwDYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-08T12:23:48.072Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
