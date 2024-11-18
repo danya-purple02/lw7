@@ -18,12 +18,6 @@ struct Graph
 	struct Node** list;
 };
 
-struct Stack 
-{
-	int items[MAX_VERTICES];
-	int top;
-};
-
 int** create_adjacency_matrix(int vertexes);
 int cout_matrix(int vertexes, int** G);
 void DFS_matrix_stack(int** g, int s, int size, bool* vis);
@@ -107,15 +101,18 @@ void DFS_matrix_stack(int** g, int s, int size, bool* vis)
 {
 	stack<int> stack;
 	stack.push(s);
-	vis[s] = true;
+	vis[s] = 1;
 
-	while (!stack.empty()) {
+	while (!stack.empty()) 
+	{
 		int v = stack.top();
 		stack.pop();
 		cout << v << " -> ";
 
-		for (int i = size - 1; i >= 0; i--) {
-			if (g[v][i] == 1 && !vis[i]) {
+		for (int i = size - 1; i >= 0; i--) 
+		{
+			if (g[v][i] == 1 && !vis[i]) 
+			{
 				stack.push(i);
 				vis[i] = true;
 			}
