@@ -1,12 +1,14 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
+#include <stack>
 
 using namespace std;
 
 int** create_adjacency_matrix(int vertexes);
 int cout_matrix(int vertexes, int** G);
 
-void DFS_matrix(int** g, int s, int size, int* vis);
+void DFS_matrix(int** g, int s, int size, bool* vis);
+void DFS_matrix_stack(int** g, int s, int size, bool* vis);
 
 void main()
 {
@@ -20,7 +22,7 @@ void main()
 	M = create_adjacency_matrix(vertexes);
 	cout_matrix(vertexes, M);
 
-	int* visited = new int[vertexes];
+	bool* visited = new bool[vertexes];
 	for (int i = 0; i < vertexes; i++)
 	{
 		visited[i] = 0;
@@ -29,8 +31,16 @@ void main()
 	cout << endl << "input input number of vertex to star with: ";
 	cin >> to_start_with;
 
-	cout << endl << "First-deep search: " << endl;
+	cout << endl << "First-deep recursive search: " << endl;
 	DFS_matrix(M, to_start_with, vertexes, visited);
+
+	for (int i = 0; i < vertexes; i++)
+	{
+		visited[i] = 0;
+	}
+
+	cout << endl << "First-deep non-recursive search: " << endl;
+	DFS_matrix_stack(M, to_start_with, vertexes, visited);
 
 	cout << endl;
 	return;
@@ -84,7 +94,7 @@ int cout_matrix(int vertexes, int** G)
 	return 1;
 }
 
-void DFS_matrix(int** g, int s, int size, int* vis)
+void DFS_matrix(int** g, int s, int size, bool* vis)
 {
 	vis[s] = 1;
 	cout << s << " -> ";
@@ -94,6 +104,26 @@ void DFS_matrix(int** g, int s, int size, int* vis)
 		{
 			DFS_matrix(g, i, size, vis);
 			cout << endl << "^" << s << " -> ";
+		}
+	}
+}
+
+void DFS_matrix_stack(int** g, int s, int size, bool* vis)
+{
+	stack<int> stack;
+	stack.push(s);
+	vis[s] = 1;
+
+	while (!stack.empty()) {
+		int v = stack.top();
+		stack.pop();
+		cout << v << " -> ";
+
+		for (int i = size - 1; i >= 0; i--) {
+			if (g[v][i] == 1 && !vis[i]) {
+				stack.push(i);
+				vis[i] = 1;
+			}
 		}
 	}
 }

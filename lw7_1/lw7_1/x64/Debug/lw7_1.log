@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\prog\PSU\logics\lw7\lw7_1\lw7_1\main.cpp(13,6): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+C:\prog\PSU\logics\lw7\lw7_1\lw7_1\main.cpp(51,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  lw7_1.vcxproj -> C:\prog\PSU\logics\lw7\lw7_1\x64\Debug\lw7_1.exe
